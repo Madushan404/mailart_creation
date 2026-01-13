@@ -1,0 +1,20 @@
+# Ignore sensitive credentials
+.env
+wp-config.php
+
+# Ignore the actual database files (usually a folder in your root)
+mysql/
+mariadb-data/
+
+# Ignore large media and system files
+wp-content/uploads/
+wp-content/cache/
+node_modules/
+.DS_Store
+
+# Ignore WordPress Core (Docker will download this automatically)
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+xmlrpc.php
