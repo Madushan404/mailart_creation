@@ -6,10 +6,9 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: mail_art_creation
-      MYSQL_ROOT_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: password123  # Must match WordPress password
     volumes:
       - db_data:/var/lib/mysql
-      # This line automatically imports your database on first start
       - ./db_dump.sql:/docker-entrypoint-initdb.d/db_dump.sql
 
   wordpress:
